@@ -1,0 +1,49 @@
+{
+  "agent_name": "Graphic Design Agent",
+  "agent_id": "698bebb370b73cefd2b3ec39",
+  "test_input": "Create a social media banner for our summer sale. Brand name: \"SunFlow\". Use bright yellow, orange, and teal colors. Modern minimalist style. For Instagram (1200x628px). Message: \"Summer Sale - 50% Off - Shop Now\". Include our logo placeholder areas and make it visually striking with geometric shapes.",
+  "response": {
+    "raw_text": "Your modern, minimalist Instagram banner for SunFlow's Summer Sale has been created!\n\nDesign Details:\n- Dimensions: 1200x628px (optimized for Instagram)\n- Colors: Bright yellow, orange, teal, and white\n- Style: Modern, minimalist, with bold geometric shapes (circles, rectangles, triangles)\n- Text: \"Summer Sale - 50% Off - Shop Now\" in a clean, bold sans-serif font\n- Logo placeholders: Top left and bottom right\n- Visual: No photos, only striking vector-style elements\n\nYou can view and download your banner here:\n[SunFlow Summer Sale Instagram Banner](https://url-shortner.studio.lyzr.ai/e1fb695e)\n\nLet me know if you need any revisions, text changes, or a different layout!"
+  },
+  "design_specifications": {
+    "brand_name": "SunFlow",
+    "dimensions": "1200x628px",
+    "platform": "Instagram",
+    "colors": ["bright yellow", "orange", "teal", "white"],
+    "style": "Modern, minimalist",
+    "geometric_elements": ["circles", "rectangles", "triangles"],
+    "text": "Summer Sale - 50% Off - Shop Now",
+    "font_style": "clean, bold sans-serif",
+    "logo_placement": ["top left", "bottom right"]
+  },
+  "module_outputs": {
+    "artifact_files": {
+      "url": "https://url-shortner.studio.lyzr.ai/e1fb695e",
+      "file_type": "image/design",
+      "description": "SunFlow Summer Sale Instagram Banner"
+    }
+  },
+  "field_types": {
+    "response.raw_text": "string",
+    "design_specifications": "object",
+    "design_specifications.brand_name": "string",
+    "design_specifications.dimensions": "string",
+    "design_specifications.platform": "string",
+    "design_specifications.colors": "array",
+    "design_specifications.style": "string",
+    "design_specifications.geometric_elements": "array",
+    "design_specifications.text": "string",
+    "design_specifications.font_style": "string",
+    "design_specifications.logo_placement": "array",
+    "module_outputs": "object",
+    "module_outputs.artifact_files": "object",
+    "module_outputs.artifact_files.url": "string",
+    "module_outputs.artifact_files.file_type": "string",
+    "module_outputs.artifact_files.description": "string"
+  },
+  "status": "passed",
+  "test_behavior": "Agent successfully generated design specifications and provided download URL for artifact file",
+  "image_output": true,
+  "timestamp": "2026-02-11T00:00:00Z",
+  "notes": "Agent requires detailed design specifications to generate artifacts. When provided with comprehensive requirements (brand name, colors, dimensions, style, text, and layout details), the agent creates a design with accompanying URL for the generated image. The response includes the design rationale and parameters used, plus a link to view/download the banner."
+}

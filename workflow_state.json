@@ -1,0 +1,58 @@
+{
+  "workflow_created": true,
+  "agent_count": 1,
+  "agents": [
+    {
+      "name": "Graphic Design Agent",
+      "agent_id": "698bebb370b73cefd2b3ec39",
+      "type": "assistant",
+      "has_image_output": true,
+      "has_voice_config": false,
+      "has_file_output": false,
+      "provider": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "image_output_config": {
+        "model": "gemini/gemini-3-pro-image-preview",
+        "credential_id": "lyzr_google"
+      },
+      "response_schema_saved": true,
+      "schema_file": "response_schemas/graphic_design_agent_response.json"
+    }
+  ],
+  "knowledge_bases": [],
+  "schedules": [],
+  "workflow": {
+    "nodes": [
+      {
+        "id": "input_node",
+        "type": "Input",
+        "label": "User Design Brief",
+        "nodeCategory": "input"
+      },
+      {
+        "id": "graphic_design_agent",
+        "type": "Agent",
+        "label": "Graphic Design Agent",
+        "nodeCategory": "agent"
+      },
+      {
+        "id": "output_node",
+        "type": "Output",
+        "label": "Generated Visual Assets",
+        "nodeCategory": "end"
+      }
+    ],
+    "edges": [
+      {
+        "source": "input_node",
+        "target": "graphic_design_agent"
+      },
+      {
+        "source": "graphic_design_agent",
+        "target": "output_node"
+      }
+    ]
+  }
+}

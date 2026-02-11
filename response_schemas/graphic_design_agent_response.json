@@ -1,0 +1,47 @@
+{
+  "agent_name": "Graphic Design Agent",
+  "agent_id": "698bebb370b73cefd2b3ec39",
+  "agent_purpose": "image_generation",
+  "description": "Response schema for graphic design agent with image output capability",
+  "response_schema": {
+    "status": "string (success|error)",
+    "result": {
+      "response": "string",
+      "action_taken": "string (optional)",
+      "data": "object (optional, any structured data)",
+      "suggestions": [
+        "string (optional)"
+      ]
+    },
+    "metadata": {
+      "agent_name": "string",
+      "timestamp": "string (ISO)"
+    }
+  },
+  "example_response": {
+    "status": "success",
+    "result": {
+      "response": "I've completed the task you requested",
+      "action_taken": "Processed the input and generated output",
+      "data": {
+        "key": "value"
+      },
+      "suggestions": [
+        "You might also want to try X"
+      ]
+    },
+    "metadata": {
+      "agent_name": "Graphic Design Agent",
+      "timestamp": "2025-01-15T10:30:00Z"
+    }
+  },
+  "is_actual_tested": false,
+  "test_timestamp": "2026-02-11T02:40:05.026321",
+  "test_message_used": "Hello, provide a sample response",
+  "raw_test_response": "Hello! Could you please clarify what type of sample response you need? For example:\n\n- Do you want a sample graphic design brief (e.g., for a social media post, banner, or promotional material)?\n- Are you looking for a sample description of the design process or workflow?\n- Would you like a sample image or visual concept for a specific marketing use case?\n\nPlease provide a bit more detail about your requirements so I can deliver the most relevant example!",
+  "test_error": "Response not valid JSON: Expecting value: line 1 column 1 (char 0)",
+  "actual_test_response": {
+    "raw_text": "Your modern, minimalist Instagram banner for SunFlow's Summer Sale has been created!\n\nDesign Details:\n- Dimensions: 1200x628px (optimized for Instagram)\n- Colors: Bright yellow, orange, teal, and white\n- Style: Modern, minimalist, with bold geometric shapes (circles, rectangles, triangles)\n- Text: \u201cSummer Sale - 50% Off - Shop Now\u201d in a clean, bold sans-serif font\n- Logo placeholders: Top left and bottom right\n- Visual: No photos, only striking vector-style elements\n\nYou can view and download your banner here:\n[SunFlow Summer Sale Instagram Banner](https://url-shortner.studio.lyzr.ai/e1fb695e)\n\nLet me know if you need any revisions, text changes, or a different layout!"
+  },
+  "test_passed": false
+}
