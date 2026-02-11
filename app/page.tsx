@@ -162,10 +162,17 @@ export default function Home() {
     try {
       const result = await callAIAgent(prompt, AGENT_ID)
 
+      // Debug: Log the full response structure
+      console.log('Full API Response:', JSON.stringify(result, null, 2))
+
       if (result.success) {
-        const explanation = result?.response?.raw_text ?? ''
+        // Access the actual response data from result.response.result
+        const responseData = result.response?.result || {}
+        const explanation = responseData?.response?.raw_text ?? responseData?.raw_text ?? result.response?.message ?? ''
         const imageUrl = result?.module_outputs?.artifact_files?.url ?? ''
-        const specs = result?.design_specifications ?? {}
+        const specs = responseData?.design_specifications ?? {}
+
+        console.log('Extracted data:', { explanation, imageUrl, specs })
 
         const assistantMessage: ChatMessage = {
           role: 'assistant',
